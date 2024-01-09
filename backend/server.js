@@ -20,8 +20,8 @@ app.use(express.json())
 app.use(cookieParser())
 
 app.use(cors({
-  origin: ["http://localhost:5173"],
-  credentials: true
+  // origin: ["http://localhost:5173"],
+  // credentials: true
 }))
 // global middleware
 app.use((req, res, next) => {
@@ -29,9 +29,7 @@ app.use((req, res, next) => {
   next()
 })
 
-// routes
-const Item = require('./models/itemModel')
-const User = require('./models/userModel')
+
 
 // app.get('/', function (req, res) {
 //   res.send('welcome to the api');
